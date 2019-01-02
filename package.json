@@ -1,0 +1,32 @@
+{
+  "name": "react-bootstrap-template",
+  "version": "0.1.0",
+  "description": "simple timeline with svg map for certain historical events",
+  "main": "./build/bundle.js",
+  "scripts": {
+    "webpack": "./node_modules/.bin/webpack --progress --color --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^3.12.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}

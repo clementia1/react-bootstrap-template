@@ -4,8 +4,9 @@
   "description": "simple timeline with svg map for certain historical events",
   "main": "./build/bundle.js",
   "scripts": {
-    "webpack": "./node_modules/.bin/webpack --progress --color --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack": "./node_modules/.bin/webpack --mode=development --progress --color --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/webpack --config webpack.prod.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,7 +21,9 @@
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.21.0",
-    "webpack": "^3.12.0"
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "bootstrap": "^4.2.1",

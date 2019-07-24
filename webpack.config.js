@@ -31,9 +31,18 @@ module.exports = {
                     options: {
                         cacheDirectory: true,
                         presets: ['react', 'env'],
-                        plugins: ['transform-class-properties']
+                        plugins: ['transform-class-properties', 'transform-object-rest-spread']
                     }
                 }]
+            },
+            {
+                test: /\.(woff2?|ttf|otf|eot|svg)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: './static/[name].[ext]'
+                    }
+                }],
             }
         ],
     }

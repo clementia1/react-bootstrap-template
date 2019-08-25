@@ -3,10 +3,11 @@ var webpack = require('webpack');
 
 var BUILD_DIR = path.resolve(__dirname, './build');
 var APP_DIR = path.resolve(__dirname, './src');
+let index = APP_DIR + '/index.js';
 
 module.exports = {
     entry: {
-        main: APP_DIR + '/index.js'
+        main: ['babel-polyfill', index]
     },
     output: {
         filename: 'bundle.js',
@@ -16,11 +17,11 @@ module.exports = {
         rules: [{
                 test: /(\.css|.scss)$/,
                 use: [{
-                    loader: "style-loader" // creates style nodes from JS strings
+                    loader: "style-loader"
                 }, {
-                    loader: "css-loader" // translates CSS into CommonJS
+                    loader: "css-loader"
                 }, {
-                    loader: "sass-loader" // compiles Sass to CSS
+                    loader: "sass-loader"
                 }]
             },
             {
@@ -36,7 +37,7 @@ module.exports = {
                 }]
             },
             {
-                test: /\.(woff2?|ttf|otf|eot|svg)$/,
+                test: /\.(woff2?|ttf|otf|eot|svg|png)$/,
                 use: [{
                     loader: 'file-loader',
                     options: {
